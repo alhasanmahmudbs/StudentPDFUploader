@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student PDF Uploader</title>
+</head>
+<body>
+    <h1>Upload Your PDF</h1>
+    <form action="server/upload.php" method="POST" enctype="multipart/form-data">
+        <label>Your Name:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label>Choose PDF:</label>
+        <input type="file" name="file" accept="application/pdf" required><br><br>
+
+        <label>Number of Pages:</label>
+        <input type="number" name="pages" required><br><br>
+
+        <label>Print Type:</label>
+        <select name="color">
+            <option value="color">Color</option>
+            <option value="bw">Black & White</option>
+        </select><br><br>
+
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
